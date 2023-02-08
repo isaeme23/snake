@@ -1,0 +1,18 @@
+1. Son autonomas ya que al ser hilos se pueden crear cualquier cantidad de serpientes con movimientos independientes
+se los da un metodo de randomMovement junto con una cabeza asignada a cada una para su construccion como lo indica el
+constructor de la clase Snake.
+
+2.
+   a. Condiciones de Carrera:
+        I. Puede que dos serpientes vayan a los ratones, boost o puntos de teletransportacion al tiempo y no se sabria
+        a que serpiente le corresponderia agarrar el elemento.
+   b. Uso inadecuado de colecciones: LinkedList en como se almacena en una coleccion el cuerpo de la serpiente.
+   c. Uso innecesario de esperas activas: Una espera activa se define como realizar una comprobacion en un bucle hasta
+   que se cumpla dicha condicion. Se usa en el metodo run de Snake, ya que la primera de sus lineas es un while(!snakeEnd)
+   y espera a que este resultado sea falso para terminar con el proceso.
+
+3. Para las condiciones de carrera identificadas, sincronizamos el parametro de newCell despues de realizar la
+verificacion de que esta celula fuera food, boost o jump pad. Para el error de la coleccion, modificamos el codigo de la
+iteracion de la colecccion para no se genere mas ya que intentaba modificar un elemento y al mismo tiempo modificarlo.
+
+4.
